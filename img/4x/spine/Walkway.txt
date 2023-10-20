@@ -1,0 +1,83 @@
+
+Walkway.png
+size: 607, 119
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+Moving Walkway/Moving Walkway_track
+  rotate: false
+  xy: 1, 89
+  size: 446, 29
+  orig: 446, 29
+  offset: 0, 0
+  index: -1
+Moving Walkway/end_down
+  rotate: false
+  xy: 448, 71
+  size: 129, 47
+  orig: 129, 47
+  offset: 0, 0
+  index: -1
+Moving Walkway/end_up
+  rotate: false
+  xy: 1, 41
+  size: 207, 47
+  orig: 207, 47
+  offset: 0, 0
+  index: -1
+Moving Walkway/glow
+  rotate: false
+  xy: 550, 14
+  size: 56, 56
+  orig: 57, 58
+  offset: 1, 0
+  index: -1
+Moving Walkway/middle_down
+  rotate: false
+  xy: 1, 1
+  size: 113, 39
+  orig: 113, 39
+  offset: 0, 0
+  index: -1
+Moving Walkway/middle_up
+  rotate: false
+  xy: 115, 1
+  size: 113, 39
+  orig: 113, 39
+  offset: 0, 0
+  index: -1
+Moving Walkway/start_down
+  rotate: false
+  xy: 209, 41
+  size: 184, 47
+  orig: 184, 47
+  offset: 0, 0
+  index: -1
+Moving Walkway/start_up
+  rotate: false
+  xy: 441, 23
+  size: 108, 47
+  orig: 108, 47
+  offset: 0, 0
+  index: -1
+chickenapult/Chickenapult_Smoke-1
+  rotate: false
+  xy: 229, 3
+  size: 60, 37
+  orig: 60, 37
+  offset: 0, 0
+  index: -1
+chickenapult/Chickenapult_Smoke-2
+  rotate: true
+  xy: 394, 4
+  size: 84, 46
+  orig: 84, 46
+  offset: 0, 0
+  index: -1
+chickenapult/Chickenapult_Smoke-4
+  rotate: false
+  xy: 290, 8
+  size: 55, 32
+  orig: 55, 32
+  offset: 0, 0
+  index: -1

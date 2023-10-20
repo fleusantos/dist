@@ -1,0 +1,62 @@
+
+dig-merge.png
+size: 598, 159
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+Dig_Start_7
+  rotate: false
+  xy: 1, 105
+  size: 314, 53
+  orig: 314, 53
+  offset: 0, 0
+  index: -1
+Dig_Trail_11
+  rotate: false
+  xy: 316, 117
+  size: 262, 41
+  orig: 262, 41
+  offset: 0, 0
+  index: -1
+dirt moving_3
+  rotate: false
+  xy: 1, 53
+  size: 198, 51
+  orig: 198, 51
+  offset: 0, 0
+  index: -1
+dirt moving_4
+  rotate: false
+  xy: 1, 1
+  size: 198, 51
+  orig: 198, 51
+  offset: 0, 0
+  index: -1
+dirt moving_5
+  rotate: false
+  xy: 200, 53
+  size: 198, 51
+  orig: 198, 51
+  offset: 0, 0
+  index: -1
+dirt moving_6
+  rotate: false
+  xy: 399, 65
+  size: 198, 51
+  orig: 198, 51
+  offset: 0, 0
+  index: -1
+dirt moving_7
+  rotate: false
+  xy: 399, 13
+  size: 198, 51
+  orig: 198, 51
+  offset: 0, 0
+  index: -1
+dirt moving_8
+  rotate: false
+  xy: 200, 1
+  size: 198, 51
+  orig: 198, 51
+  offset: 0, 0
+  index: -1

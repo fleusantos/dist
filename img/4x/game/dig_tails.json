@@ -1,0 +1,77 @@
+{
+    "frames": {
+
+        "Dig_Start_7":
+        {
+            "frame": {"x":1,"y":105,"w":314,"h":53},
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {"x":0,"y":0,"w":314,"h":53},
+            "sourceSize": {"w":314,"h":53}
+        },
+        "Dig_Trail_11":
+        {
+            "frame": {"x":316,"y":117,"w":262,"h":41},
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {"x":0,"y":0,"w":262,"h":41},
+            "sourceSize": {"w":262,"h":41}
+        },
+        "dirt moving_3":
+        {
+            "frame": {"x":1,"y":53,"w":198,"h":51},
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {"x":0,"y":0,"w":198,"h":51},
+            "sourceSize": {"w":198,"h":51}
+        },
+        "dirt moving_4":
+        {
+            "frame": {"x":1,"y":1,"w":198,"h":51},
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {"x":0,"y":0,"w":198,"h":51},
+            "sourceSize": {"w":198,"h":51}
+        },
+        "dirt moving_5":
+        {
+            "frame": {"x":200,"y":53,"w":198,"h":51},
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {"x":0,"y":0,"w":198,"h":51},
+            "sourceSize": {"w":198,"h":51}
+        },
+        "dirt moving_6":
+        {
+            "frame": {"x":399,"y":65,"w":198,"h":51},
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {"x":0,"y":0,"w":198,"h":51},
+            "sourceSize": {"w":198,"h":51}
+        },
+        "dirt moving_7":
+        {
+            "frame": {"x":399,"y":13,"w":198,"h":51},
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {"x":0,"y":0,"w":198,"h":51},
+            "sourceSize": {"w":198,"h":51}
+        },
+        "dirt moving_8":
+        {
+            "frame": {"x":200,"y":1,"w":198,"h":51},
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {"x":0,"y":0,"w":198,"h":51},
+            "sourceSize": {"w":198,"h":51}
+        }
+    },
+    "meta": {
+        "app": "Adobe Animate",
+        "version": "20.0.3.25487",
+        "image": "dig_tails.png",
+        "format": "RGBA8888",
+        "size": {"w":598,"h":159},
+        "scale": "1"
+    }
+}

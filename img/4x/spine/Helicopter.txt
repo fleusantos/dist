@@ -1,0 +1,48 @@
+
+Helicopter.png
+size: 657, 508
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+Helicopter/Helicopter
+  rotate: false
+  xy: 1, 203
+  size: 552, 304
+  orig: 552, 304
+  offset: 0, 0
+  index: -1
+Helicopter/side_propeller0001
+  rotate: false
+  xy: 575, 114
+  size: 81, 97
+  orig: 81, 97
+  offset: 0, 0
+  index: -1
+Helicopter/side_propeller0002
+  rotate: false
+  xy: 575, 16
+  size: 81, 97
+  orig: 81, 97
+  offset: 0, 0
+  index: -1
+Helicopter/stairs
+  rotate: false
+  xy: 554, 212
+  size: 82, 295
+  orig: 82, 295
+  offset: 0, 0
+  index: -1
+Helicopter/top propeller0001
+  rotate: false
+  xy: 1, 102
+  size: 573, 100
+  orig: 573, 100
+  offset: 0, 0
+  index: -1
+Helicopter/top propeller0002
+  rotate: false
+  xy: 1, 1
+  size: 573, 100
+  orig: 573, 100
+  offset: 0, 0
+  index: -1

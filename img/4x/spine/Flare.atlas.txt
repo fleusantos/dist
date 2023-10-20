@@ -1,0 +1,48 @@
+
+Flare.png
+size: 563, 135
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+Flare_Winner/Flare
+  rotate: false
+  xy: 384, 38
+  size: 109, 96
+  orig: 119, 112
+  offset: 4, 8
+  index: -1
+Glow
+  rotate: true
+  xy: 267, 21
+  size: 113, 116
+  orig: 121, 128
+  offset: 3, 7
+  index: -1
+Glow_Circle
+  rotate: false
+  xy: 136, 13
+  size: 130, 121
+  orig: 136, 129
+  offset: 3, 5
+  index: -1
+Shine
+  rotate: false
+  xy: 1, 1
+  size: 134, 133
+  orig: 134, 133
+  offset: 0, 0
+  index: -1
+Shine_star
+  rotate: true
+  xy: 494, 59
+  size: 75, 68
+  orig: 77, 76
+  offset: 1, 4
+  index: -1
+Star
+  rotate: true
+  xy: 494, 33
+  size: 25, 26
+  orig: 32, 31
+  offset: 3, 3
+  index: -1
