@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Chicken Derby | Game Player</title>
+    <meta name="author" content="Chicken Derby" />
+    <meta name="description" content="Join the most fun and exciting game where you can own and race your chicken to earn ETH. Brought by the makers of Ganja Farmer." />
+
+    <!-- Application/LD+JSON -->
+    <script type=application/ld+json>
+        {
+          "@context":"http:\/\/schema.org",
+          "@type":"WebSite",
+          "@id":"#website",
+          "url":"https:\/\/www.play.chickenderby.com/\/",
+          "name":"www.play.chickenderby.com"
+        }
+    </script>
+    <script type=application/ld+json>
+        {
+            "@context":"http:\/\/schema.org",
+            "@type":"Organization",
+            "url":"https:\/\/www.play.chickenderby.com\/",
+            "@id":"#organization",
+            "name":"Chicken Derby",
+            "logo":"https:\/\/www.chickenderby.com\/banner.jpg"
+        }
+    </script>
+
+    <!-- RESOURCE HINTS -->
+    <link rel="preconnect" href="https://images.chickenderby.com" />
+    <link rel="dns-prefetch" href="https://images.chickenderby.com" />
+    <link rel="preconnect" href="https://videos.chickenderby.com" />
+    <link rel="dns-prefetch" href="https://videos.chickenderby.com" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chicken Derby | Game Player">
+    <meta name="twitter:description" content="Join the most fun and exciting game where you can own and race your chicken to earn ETH. Brought by the makers of Ganja Farmer.">
+    <meta name="twitter:domain" content="play.chickenderby.com">
+    <meta name="twitter:image" content="https://www.chickenderby.com/banner.jpg">
+    <meta property="twitter:url" content="https://www.play.chickenderby.com/">
+
+    <!-- Facebook -->
+    <meta property="og:title" content="Chicken Derby | Game Player">
+    <meta property="og:site_name" content="Chicken Derby | Game Player">
+    <meta property="og:url" content="https://www.play.chickenderby.com/">
+    <meta property="og:description" content="Join the most fun and exciting game where you can own and race your chicken to earn ETH. Brought by the makers of Ganja Farmer.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.chickenderby.com/banner.jpg">
+
+    <!-- General -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="language" content="en" />
+    <meta name="hostname" content="www.play.chickenderby.com" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel=apple-touch-icon-precomposed href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PL5L03GTX"></script>
+    <!-- Scripts -->
+    <script src="src/libs/plugins/webfont.js"></script>
+    <script src="src/libs/plugins/SpinePlugin.js"></script>
+    <!-- <script src="src/libs/phaser_3.55.2.js"></script> -->
+    <script src="src/libs/howler.js"></script>
+    <script src="src/helper/utils.js"></script>
+    <script src="src/helper/constants.js"></script>
+    <script src="src/helper/mock.js"></script>
+    <!-- <script src="src/scene/Boot.js"></script>
+    <script src="src/scene/Preloader.js"></script>
+    <script src="src/scene/Main.js"></script>
+    <script src="src/scene/Winner.js"></script> -->
+    <!-- <script src="src/object/Chicken.js"></script> -->
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background: #92bf02 url(img/4x/game/pattern.jpg) repeat;
+            overflow: hidden;
+        }
+        
+        #banner {
+            display: none;
+        }
+        
+        @font-face {
+            font-family: roboto;
+            src: url('./fonts/roboto.ttf');
+            font-weight:400;
+            font-weight:normal;
+        }
+
+        #fullScreenControlPanel {
+            font-family: roboto;
+            src: url('./fonts/roboto.ttf');
+            width: 170px;
+            height: 70px;
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            color: #FFF;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="font-family:roboto; position:absolute; left:-1000px; visibility:hidden;">.</div>
+    <div id="git-info" style="position: fixed; right: 5px; bottom: 5px; color: white; font-size: 12px; padding: 2px 5px; background-color: rgba(0, 0, 0, 0.5);"></div>
+    <script>
+        /*var gameInfo = {};*/
+    </script>
+    <!-- <script src="src/start.js"></script> -->
+    <div id="fullScreenControlPanel">
+        <div style="background-color: rgba(71, 64, 64, 0.5); border-top-right-radius: 5px; border-top-left-radius: 5px;">
+            <div id="hideFullPanel" style="display: flex; align-items: center; width: fit-content;  margin-left: auto;">
+                <span style="color: #e1e1e1; font-size: 13px; font-weight: bold;">Hide</span>
+                <img src="./img/common/close.svg" width="20" />
+            </div>
+        </div>
+        <div id="expandFullPanel" style="display: flex; align-items: center; background-color: rgba(71, 64, 64, 0.8); border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+            <img src="./img/common/full.svg" width="50">
+            <span style="color: #e1e1e1; font-size: 14px; font-weight: bold; padding-left: 5px;">Enable fullscreen</span>
+        </div>
+    </div>
+    <script>
+        // var ENVIRONMENT = "dev";
+        var ENVIRONMENT = "prod";
+        var gameInfo;
+        var TERRAIN_CNT = 8;
+        var BORDER_CNT = 4;
+        var assetUrl = "img"
+    </script>
+
+</body>
+
+</html>
