@@ -179,20 +179,23 @@ export default class Preloader extends Phaser.Scene {
         volume: 0.5,
         ingamename: "replay_crossline",
       },
-      ...gameInfo.raceStats.id == 145384 ? [
+      ...gameInfo.raceStats.id == 2853 || gameInfo.raceStats.id == 2927 ? [
         // ...gameInfo.soundProfiles,
-        'CK-47/CK-47_Draw',
-        'CK-47/CK-47_FireBackward',
-        'CK-47/CK-47_LandBackwards',
-        'CK-47/CK-47_LandForward',
-        'CK-47/CK-47_LeapAway',
-        'CK-47/CK-47_LeapBack',
-        'CK-47/CK-47_Wince',
-        'Chickenapult/Chickenapult_Airtime',
-        'Chickenapult/Chickenapult_Landing',
-        'Chickenapult/Chickenapult_Launch',
-        'Chickenapult/Chickenapult_Roll',
-        'Chickenapult/Chickenapult_Spawn'
+        ...gameInfo.raceStats.id == 2853 ? [
+          'CK-47/CK-47_Draw',
+          'CK-47/CK-47_FireBackward',
+          'CK-47/CK-47_LandBackwards',
+          'CK-47/CK-47_LandForward',
+          'CK-47/CK-47_LeapAway',
+          'CK-47/CK-47_LeapBack',
+          'CK-47/CK-47_Wince',
+        ] : [
+          'Chickenapult/Chickenapult_Airtime',
+          'Chickenapult/Chickenapult_Landing',
+          'Chickenapult/Chickenapult_Launch',
+          'Chickenapult/Chickenapult_Roll',
+          'Chickenapult/Chickenapult_Spawn'
+        ]
       ].map((sound) => ({
         filename: `sfx/talents/${sound.split('/')[0]}/${sound.split('/')[1]}`,
         loop: false,

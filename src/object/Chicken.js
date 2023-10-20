@@ -1029,10 +1029,13 @@ export default class Chicken extends Phaser.GameObjects.Container {
     }
   }
 
-  scanAniPlaySound (aniName, isTalent = false) {
+  scanAniPlaySound (talentNameWithCategory, isTalent = false) {
     if (isTalent) {
-      const talentName = aniName;
-      playSound(talentName, 0.5, false);
+
+      const talentCategory = talentNameWithCategory.split('/')[0];
+      const talentName = talentNameWithCategory.split('/')[1];
+      console.log('before play talent sound show talentnamewithcategory; ', talentNameWithCategory)
+      playTalentSound(talentCategory, talentName, 0.5, false);
     }
   }
 
@@ -1050,7 +1053,7 @@ export default class Chicken extends Phaser.GameObjects.Container {
       const ani = this.getAniName(aniName);
       if (this.chicken.findAnimation(ani) != null) {
         this.chicken.play(ani, isLoop === undefined ? this.isLoop : isLoop);
-        this.scanAniPlaySound(aniName, this.isTalant);
+        this.scanAniPlaySound(ani, this.isTalant);
       } else {
         if (this.scene.env === "dev") {
           console.log("animName: ", aniName);

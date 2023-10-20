@@ -163,7 +163,7 @@ Utils.webglSupport = () => {
 
   try {
     gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-  } catch (e) {}
+  } catch (e) { }
 
   if (gl) {
     debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
@@ -306,6 +306,8 @@ Utils.getDocumentDimension = () => {
 let soundsStore = {};
 let gameMusicOn = true;
 let sfxIsOn = true;
+let currentTalentSound = { category: '', sound: null, soundId: null };
+let threadId = 0
 
 const playSound = (szSound, iVolume, bLoop) => {
   if (!soundsStore[szSound]) return
@@ -317,6 +319,25 @@ const playSound = (szSound, iVolume, bLoop) => {
 
   return soundsStore[szSound];
 };
+
+const playTalentSound = (category, szSound, iVolume, bLoop) => {
+  if (!soundsStore[szSound]) return
+
+  threadId++
+
+  // console.log('show currentTalentSound Before play new sound', threadId, currentTalentSound)
+  currentTalentSound.sound?.stop(currentTalentSound.soundId)
+
+  const soundId = soundsStore[szSound].play();
+  soundsStore[szSound].volume(iVolume);
+
+  soundsStore[szSound].loop(bLoop);
+
+  currentTalentSound = { category, sound: soundsStore[szSound], soundId, szSound }
+  // console.log('show currentTalentSound after play new sound', threadId, currentTalentSound)
+
+  return soundsStore[szSound];
+}
 
 // Usage tracking - remember to replace with your own!
 const head = document.getElementsByTagName("head")[0];

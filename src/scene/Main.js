@@ -570,6 +570,7 @@ export default class Main extends Phaser.Scene {
         const seg = meta.segments[i];
         this.time.addEvent({
           callback: () => {
+            
             this.ck47Chicken.chicken.play(
               `CK-47/${seg.segmentChickenAnimation}`,
               i === 1
@@ -577,7 +578,7 @@ export default class Main extends Phaser.Scene {
             this.ck47Chicken.setVisible(true);
             this.ck47Chicken.currentSpeed = meta.segments[0].startSpeed;
             this.ck47Chicken.setAttributes(chicken.info);
-            this.ck47Chicken.scanAniPlaySound(seg.segmentChickenAnimation, true);
+            this.ck47Chicken.scanAniPlaySound(`CK-47/${seg.segmentChickenAnimation}`, true);
             // force attribute change
             this.time.addEvent({
               callback: () => {
