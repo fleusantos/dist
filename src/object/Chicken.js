@@ -1029,14 +1029,23 @@ export default class Chicken extends Phaser.GameObjects.Container {
     }
   }
 
-  scanAniPlaySound (talentNameWithCategory, isTalent = false) {
-    if (isTalent) {
+  scanAniPlaySound(talentNameWithCategory, isTalent = false) {
+    const aniCategory = talentNameWithCategory.split('/')[0];
+    const aniName = talentNameWithCategory.split('/')[1];
 
-      const talentCategory = talentNameWithCategory.split('/')[0];
-      const talentName = talentNameWithCategory.split('/')[1];
-      console.log('before play talent sound show talentnamewithcategory; ', talentNameWithCategory)
-      playTalentSound(talentCategory, talentName, 0.5, false);
+    // console.log('soundinfo', soundInfo)
+
+    if (isTalent) {
+      const talentCategory = aniCategory
+      const talentName = aniName
+
+      console.log('before play talent sound show talentnamewithcategory; ', this.info.id, talentNameWithCategory)
+      playTalentSound(this.info.id, talentCategory, talentName, 0.5, true);
+    } else {
+      // console.log('before play talent sound show talentnamewithcategory; ', talentNameWithCategory)
+      stopTalentSound(this.info.id, aniName)
     }
+    // console.log('info', this.info)
   }
 
   playAnimation(aniName, isLoop) {

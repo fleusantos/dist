@@ -141,7 +141,7 @@ export default class Preloader extends Phaser.Scene {
         ],
       ],
     };
-
+    console.log('gameinfo', gameInfo)
     const soundInfo = [
       {
         filename: "sfx/sfx_countdown",
@@ -179,30 +179,15 @@ export default class Preloader extends Phaser.Scene {
         volume: 0.5,
         ingamename: "replay_crossline",
       },
-      ...gameInfo.raceStats.id == 2853 || gameInfo.raceStats.id == 2927 ? [
-        // ...gameInfo.soundProfiles,
-        ...gameInfo.raceStats.id == 2853 ? [
-          'CK-47/CK-47_Draw',
-          'CK-47/CK-47_FireBackward',
-          'CK-47/CK-47_LandBackwards',
-          'CK-47/CK-47_LandForward',
-          'CK-47/CK-47_LeapAway',
-          'CK-47/CK-47_LeapBack',
-          'CK-47/CK-47_Wince',
-        ] : [
-          'Chickenapult/Chickenapult_Airtime',
-          'Chickenapult/Chickenapult_Landing',
-          'Chickenapult/Chickenapult_Launch',
-          'Chickenapult/Chickenapult_Roll',
-          'Chickenapult/Chickenapult_Spawn'
-        ]
-      ].map((sound) => ({
+      ...soundProfilesMock[gameInfo.raceStats.id].map(({sound, loop, serial}) => ({
         filename: `sfx/talents/${sound.split('/')[0]}/${sound.split('/')[1]}`,
-        loop: false,
+        loop,
         volume: 0.5,
         ingamename: `${sound.split('/')[1]}`,
-      })) : {}
+        serial,
+      }))
     ];
+    window.soundInfo = JSON.parse(JSON.stringify(soundInfo))
 
     const terrain = gameInfo.raceStats.terrain.name.toLowerCase();
 
@@ -301,6 +286,10 @@ export default class Preloader extends Phaser.Scene {
         volume: soundInfo[i].volume,
         onload: this.fileComplete(),
       });
+
+      soundInfoDetail[soundInfo[i].ingamename] = {
+        serial: soundInfo[i].serial,
+      }
     }
   }
 

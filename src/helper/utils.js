@@ -304,9 +304,10 @@ Utils.getDocumentDimension = () => {
 };
 
 let soundsStore = {};
+let soundInfoDetail = {};
 let gameMusicOn = true;
 let sfxIsOn = true;
-let currentTalentSound = { category: '', sound: null, soundId: null };
+let currentTalentSound = { chickenId: -1, category: '', sound: null, soundId: null };
 let threadId = 0
 
 const playSound = (szSound, iVolume, bLoop) => {
@@ -320,23 +321,29 @@ const playSound = (szSound, iVolume, bLoop) => {
   return soundsStore[szSound];
 };
 
-const playTalentSound = (category, szSound, iVolume, bLoop) => {
+const playTalentSound = (chickenId, category, szSound, iVolume, bLoop) => {
   if (!soundsStore[szSound]) return
 
   threadId++
 
   // console.log('show currentTalentSound Before play new sound', threadId, currentTalentSound)
-  currentTalentSound.sound?.stop(currentTalentSound.soundId)
+  if (soundInfoDetail[szSound].serial)
+    currentTalentSound.sound?.stop(currentTalentSound.soundId)
 
   const soundId = soundsStore[szSound].play();
   soundsStore[szSound].volume(iVolume);
 
-  soundsStore[szSound].loop(bLoop);
+  // soundsStore[szSound].loop(bLoop);
 
-  currentTalentSound = { category, sound: soundsStore[szSound], soundId, szSound }
+  currentTalentSound = { chickenId, category, sound: soundsStore[szSound], soundId, szSound }
   // console.log('show currentTalentSound after play new sound', threadId, currentTalentSound)
 
   return soundsStore[szSound];
+}
+
+const stopTalentSound = (chickenId) => {
+  if (chickenId == currentTalentSound.chickenId)
+    currentTalentSound.sound?.stop()
 }
 
 // Usage tracking - remember to replace with your own!
