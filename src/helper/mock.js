@@ -238,7 +238,7 @@ const conversations = [
 const soundProfilesMock = {
   '2853': [
     { sound: 'CK-47/CK-47_Draw', loop: false, serial: true },
-    { sound: 'CK-47/CK-47_FireBackward', loop: true, serial: true },
+    { sound: 'CK-47/CK-47_FireBackward', loop: false, serial: true },
     { sound: 'CK-47/CK-47_LandBackwards', loop: false, serial: true },
     { sound: 'CK-47/CK-47_LandForward', loop: false, serial: true },
     { sound: 'CK-47/CK-47_LeapAway', loop: false, serial: true },
@@ -260,7 +260,7 @@ const soundProfilesMock = {
     { sound: 'FanGroup/FanGroup_Fan_TVCamera', loop: true, serial: true },
     { sound: 'FanGroup/FanGroup_Relief', loop: false, serial: true },
     { sound: 'FanGroup/FanGroup_Run', loop: true, serial: true },
-    { sound: 'FanGroup/FanGroup_Startle', loop: true, serial: true },
+    { sound: 'FanGroup/FanGroup_Startle', loop: false, serial: true },
   ],
   '2915': [
     { sound: 'Rollerblades/Rollerblades_Jump', loop: true, serial: true },
@@ -280,15 +280,15 @@ const soundProfilesMock = {
     { sound: 'BlueEgg/BlueEgg_Launch', loop: false, serial: true },
   ],
   '2918': [
-    { sound: 'Helicopter/Helicopter_appears', loop: true, serial: false },
-    { sound: 'Helicopter/Helicopter_disappears', loop: true, serial: false },
-    { sound: 'Helicopter/Helicopter_Dismount_Ladder', loop: true, serial: false },
-    { sound: 'Helicopter/Helicopter_Holding_Ladder_Fired', loop: true, serial: false },
-    { sound: 'Helicopter/Helicopter_Holding_Ladder_Loaded', loop: true, serial: false },
-    { sound: 'Helicopter/Helicopter_Missile_Hit_1', loop: false, serial: true },
+    { sound: 'Helicopter/Helicopter_appears', loop: false, serial: true },
+    { sound: 'Helicopter/Helicopter_disappears', loop: false, serial: true },
+    { sound: 'Helicopter/Helicopter_Dismount_Ladder', loop: false, serial: true },
+    { sound: 'Helicopter/Helicopter_Holding_Ladder_Fired', loop: false, serial: false },
+    { sound: 'Helicopter/Helicopter_Holding_Ladder_Loaded', loop: false, serial: false },
+    { sound: 'Helicopter/Helicopter_Missile_Hit_1', loop: false, serial: false },
     { sound: 'Helicopter/Helicopter_Missile_Hit_3', loop: false, serial: false },
     { sound: 'Helicopter/Helicopter_Mount_Ladder', loop: false, serial: false },
-    { sound: 'Helicopter/Helicopter_Shooting', loop: true, serial: false },
+    { sound: 'Helicopter/Helicopter_Shooting', loop: true, serial: false, repeat: 2 },
   ],
   '2919': [
     { sound: 'Anvil/Anvil_Get_Up', loop: false },
@@ -297,7 +297,7 @@ const soundProfilesMock = {
   ],
   '2920': [
     { sound: 'CK-47/CK-47_Draw', loop: false, serial: true },
-    { sound: 'CK-47/CK-47_FireBackward', loop: true, serial: true },
+    { sound: 'CK-47/CK-47_FireBackward', loop: false, serial: true },
     { sound: 'CK-47/CK-47_LandBackwards', loop: false, serial: true },
     { sound: 'CK-47/CK-47_LandForward', loop: false, serial: true },
     { sound: 'CK-47/CK-47_LeapAway', loop: false, serial: true },
@@ -377,5 +377,10 @@ const soundProfilesMock = {
     { sound: 'BlackHole/BlackHole_SpatFly', loop: false, serial: true },
     { sound: 'BlackHole/BlackHole_SpinShrink', loop: false, serial: true },
     { sound: 'BlackHole/BlackHole_Spit', loop: false, serial: true },
+  ],
+  '2932': [
+    { sound: 'RoyalProcession/RoyalProcession_Appear', loop: false, serial: true },
+    { sound: 'RoyalProcession/RoyalProcession_Dissapear', loop: false, serial: true },
+    { sound: 'RoyalProcession/RoyalProcession_Idle', loop: true, serial: true },
   ],
 }

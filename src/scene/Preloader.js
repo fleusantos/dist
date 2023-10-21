@@ -179,12 +179,13 @@ export default class Preloader extends Phaser.Scene {
         volume: 0.5,
         ingamename: "replay_crossline",
       },
-      ...soundProfilesMock[gameInfo.raceStats.id].map(({sound, loop, serial}) => ({
+      ...soundProfilesMock[gameInfo.raceStats.id].map(({sound, loop, serial, repeat}) => ({
         filename: `sfx/talents/${sound.split('/')[0]}/${sound.split('/')[1]}`,
         loop,
         volume: 0.5,
         ingamename: `${sound.split('/')[1]}`,
         serial,
+        repeat,
       }))
     ];
     window.soundInfo = JSON.parse(JSON.stringify(soundInfo))
@@ -289,6 +290,8 @@ export default class Preloader extends Phaser.Scene {
 
       soundInfoDetail[soundInfo[i].ingamename] = {
         serial: soundInfo[i].serial,
+        repeat: soundInfo[i].repeat,
+        counter: 0
       }
     }
   }

@@ -327,10 +327,22 @@ const playTalentSound = (chickenId, category, szSound, iVolume, bLoop) => {
   threadId++
 
   // console.log('show currentTalentSound Before play new sound', threadId, currentTalentSound)
-  if (soundInfoDetail[szSound].serial)
-    currentTalentSound.sound?.stop(currentTalentSound.soundId)
+  if (soundInfoDetail[szSound].serial) {
+    currentTalentSound.sound?.stop()
+    for (let key in soundsStore) {
+      if (key != szSound && key.indexOf(category) != -1)
+        soundsStore[key].stop()
+    }
+  }
 
   const soundId = soundsStore[szSound].play();
+  if (soundsStore[szSound].loop() && soundInfoDetail[szSound].repeat > 0)
+    soundsStore[szSound].on('play', () => {
+      console.log('duration', szSound, soundsStore[szSound].duration())
+      setTimeout(() => {
+        soundsStore[szSound].stop()
+      }, soundsStore[szSound].duration() * soundInfoDetail[szSound].repeat * 1000);
+    })
   soundsStore[szSound].volume(iVolume);
 
   // soundsStore[szSound].loop(bLoop);
@@ -342,6 +354,7 @@ const playTalentSound = (chickenId, category, szSound, iVolume, bLoop) => {
 }
 
 const stopTalentSound = (chickenId) => {
+  console.log('when stop', chickenId, currentTalentSound)
   if (chickenId == currentTalentSound.chickenId)
     currentTalentSound.sound?.stop()
 }
